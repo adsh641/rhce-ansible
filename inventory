@@ -1,4 +1,4 @@
 [app]
-client1.example.com
+ansible.example.com
 [database]
 client2.example.com
