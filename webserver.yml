@@ -1,0 +1,21 @@
+---
+- name: Install Apache Web Server on RHEL 7 with Custom Index Page
+  hosts: app
+  become: yes  # Run tasks as a superuser (sudo)
+
+  tasks:
+    - name: Install Apache web server
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Deploy custom index.html page
+      copy:
+        content: "<html><body><h1>Welcome to My Website</h1></body></html>"
+        dest: /var/www/html/index.html
