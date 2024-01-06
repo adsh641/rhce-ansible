@@ -17,5 +17,5 @@
 
     - name: Deploy custom index.html page
       copy:
-        content: "<html><body><h1>Welcome to My Website</h1></body></html>"
+        content: "<html><body><h1>Welcome to My Website - updated</h1></body></html>"
         dest: /var/www/html/index.html
