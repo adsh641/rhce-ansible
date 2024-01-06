@@ -1,0 +1,4 @@
+[app]
+client1.example.com
+[database]
+client2.example.com
